@@ -1,0 +1,33 @@
+.page {
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 16rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: auto;
+  border-right-width: 1px;
+  background-color: #f7fafc;
+}
+
+.sidebar-content {
+  min-width: 0;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.content {
+  overflow: auto;
+  flex: 1 1 0%;
+}
+
+main {
+  padding: 0.75rem;
+  display: flex;
+}

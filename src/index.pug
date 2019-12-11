@@ -1,0 +1,54 @@
+include mixins/_topbar
+include mixins/_sidebar
+include mixins/_menu-group
+include mixins/_menu-item
+include mixins/_menu-button-add
+include mixins/_issue
+
+doctype html
+head
+  link(rel="stylesheet", href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+body
+  .h-screen.flex
+    +sidebar
+      +menu-group("issues", "Issues")
+        +menu-item("all", "All", "#", 36, true)
+        +menu-item("assigned", "Assigned to me", "#", 2)
+        +menu-item("created", "Created by me", "#", 1)
+        +menu-item("archived", "Archived", "#", 0)
+      +menu-group("tags", "Tags")
+        +menu-item("bug", "Bug", "#", 0)
+        +menu-item("feature", "Feature Request", "#", 0)
+        +menu-item("marketing", "Marketing", "#", 0)
+        +menu-item("v2", "v2.0", "#", 0)
+        +menu-item("enhancement", "Enhancement", "#", 0)
+        +menu-item("design", "Design", "#", 0)
+      +menu-button-add
+    .flex-1.min-w-0.flex.flex-col.bg-white
+      +topbar
+      .flex-1.overflow-auto
+        main.p-3.flex
+          .ml-3.flex-shrink-0.p-3.w-64.bg-gray-100.rounded
+            h3.text-sm.font-medium.text-gray-900 Backlog
+            ul.mt-2
+              +issue("Add discount code to checkout page", {photo: "images/profile.jpg"}, "Sep 14", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "DESIGN")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "ENHANCEMENT")
+          .ml-3.flex-shrink-0.p-3.w-64.bg-gray-100.rounded
+            h3.text-sm.font-medium.text-gray-900 Backlog
+            ul.mt-2
+              +issue("Add discount code to checkout page", {photo: "images/profile.jpg"}, "Sep 14", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "FEATURE")
+          .ml-3.flex-shrink-0.p-3.w-64.bg-gray-100.rounded
+            h3.text-sm.font-medium.text-gray-900 Backlog
+            ul.mt-2
+              +issue("Add discount code to checkout page", {photo: "images/profile.jpg"}, "Sep 14", "FEATURE")
+          .ml-3.flex-shrink-0.p-3.w-64.bg-gray-100.rounded
+            h3.text-sm.font-medium.text-gray-900 Backlog
+            ul.mt-2
+              +issue("Add discount code to checkout page", {photo: "images/profile.jpg"}, "Sep 14", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "FEATURE")
+              +issue("Add discount code", {photo: "images/profile.jpg"}, "Sep 01", "FEATURE")

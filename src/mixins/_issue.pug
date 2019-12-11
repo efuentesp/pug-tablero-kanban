@@ -1,0 +1,28 @@
+mixin issue(title, user, date, type)
+
+  li.mt-2
+    a.block.p-5.bg-white.rounded.shadow(href="#")
+      .flex.justify-between
+        p.text-sm.font-medium.leading-snug.text-gray-900= title
+        span
+          img.h-6.w-6.rounded-full(src=user.photo)
+      .flex.justify-between.items-baseline
+        .text-sm.text-gray-600
+          span=date
+        .mt-2
+          case type
+            when "FEATURE"
+              span.px-2.py-1.leading-tight.inline-flex.items-center.bg-teal-100.rounded
+                svg.h-2.w-2.text-teal-500(viewBox="0 0 8 8" fill="currentColor")
+                  circle(cx="4" cy="4" r="3")
+                span.ml-1.text-sm.font-medium.text-teal-900 Feature Request
+            when "DESIGN"
+              span.px-2.py-1.leading-tight.inline-flex.items-center.bg-indigo-100.rounded
+                svg.h-2.w-2.text-indigo-500(viewBox="0 0 8 8" fill="currentColor")
+                  circle(cx="4" cy="4" r="3")
+                span.ml-1.text-sm.font-medium.text-indigo-900 Design
+            when "ENHANCEMENT"
+              span.px-2.py-1.leading-tight.inline-flex.items-center.bg-red-100.rounded
+                svg.h-2.w-2.text-red-500(viewBox="0 0 8 8" fill="currentColor")
+                  circle(cx="4" cy="4" r="3")
+                span.ml-1.text-sm.font-medium.text-red-900 Enhancement
