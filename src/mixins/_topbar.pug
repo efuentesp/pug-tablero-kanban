@@ -1,34 +1,34 @@
 mixin topbar
-  .flex-shrink-0.border-b-2.border-gray-200
-    header.px-6
-      .flex.justify-between.items-center.py-3.border-b.border-gray-200
-        .flex-1
-          .relative.w-64
-            span.absolute.inset-y-0.left-0.pl-3.flex.items-center
-              i.fa.fa-search.text-gray-600
-            input.block.w-full.rounded.border.border-gray-400.pl-10.pr-4.py-1.text-sm.text-gray-900.placeholder-gray-600(placeholder="Search")
-        div.flex.items-center
-          button
-            i.fa.fa-bell-o.text-gray-500
-          button.ml-6
-            img.h-8.w-8.rounded-full.object-cover(src="images/profile.jpg" alt="Profile")
+  .topbar
+    header
+      .searchbar
+        .searchbar-left
+          .search-field
+            span
+              i.fa.fa-search
+            input(placeholder="Buscar")
+        .searchbar-right
+          button.notification
+            i.fa.fa-bell-o
+          button.avatar
+            img(src="images/profile.jpg" alt="Profile")
 
-      .flex.items-center.justify-between.py-2
-        .flex.items-center
-          h2.text-2xl.font-semibold.text-gray-900.leading-tight All Issues
-          .ml-6.flex.items-center
-            span.rounded-full.border-2.border-white
-              img.h-6.w-6.rounded-full.object-cover(src="images/profile.jpg")
-            span.-ml-2.rounded-full.border-2.border-white
-              img.h-6.w-6.rounded-full.object-cover(src="images/profile.jpg")
-            span.-ml-2.rounded-full.border-2.border-white
-              img.h-6.w-6.rounded-full.object-cover(src="images/profile.jpg")
-        .flex
-          span.inline-flex.p-1.border.bg-gray-200.rounded
-            button.px-2.py-1.rounded
-              i.w-6.h-6.fa.fa-align-justify.text-gray-600
-            button.px-2.py-1.bg-white.rounded.shadow
-              i.w-6.h-6.fa.fa-th.text-gray-600
-          button.ml-5.flex.items-center.px-3.py-2.text-sm.font-medium.text-white.bg-gray-800.rounded-lg
+      .topbar-page-title
+        .topbar-page-title-left
+          h2 Todas las Tareas
+          .avatars
+            span
+              img(src="images/profile.jpg")
+            span
+              img(src="images/profile.jpg")
+            span
+              img(src="images/profile.jpg")
+        .topbar-page-title-right
+          span.view-modes
+            button
+              i.fa.fa-align-justify
+            button.selected
+              i.fa.fa-th
+          button.btn-primary
             i.fa.fa-plus
-            span.ml-2 New Issue
+            span Nueva Tarea
